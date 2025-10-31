@@ -1,12 +1,12 @@
-package controller;
+package org.uv.mfa.controller;
 
-import entities.User;
-import entities.OTPCode;
+import org.uv.mfa.entities.User;
+import org.uv.mfa.entities.OTPCode;
 import java.util.Optional;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import service.OTPService;
-import service.UserService;
+import org.uv.mfa.service.OTPService;
+import org.uv.mfa.service.UserService;
 
 @RestController
 @RequestMapping("/auth")

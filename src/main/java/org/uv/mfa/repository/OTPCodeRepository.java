@@ -1,7 +1,7 @@
-package repository;
+package org.uv.mfa.repository;
 
-import entities.OTPCode;
-import entities.User;
+import org.uv.mfa.entities.OTPCode;
+import org.uv.mfa.entities.User;
 import java.time.LocalDateTime;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;

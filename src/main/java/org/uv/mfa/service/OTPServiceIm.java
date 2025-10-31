@@ -1,12 +1,12 @@
-package service;
+package org.uv.mfa.service;
 
-import entities.OTPCode;
-import entities.User;
+import org.uv.mfa.entities.OTPCode;
+import org.uv.mfa.entities.User;
 import java.time.LocalDateTime;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
-import repository.OTPCodeRepository;
+import org.uv.mfa.repository.OTPCodeRepository;
 
 @Service
 public class OTPServiceIm implements OTPService {
@@ -27,7 +27,7 @@ public class OTPServiceIm implements OTPService {
         otp.setUser(user);
         otp.setCode(code);
         otp.setCreation_date(LocalDateTime.now());
-        otp.setExp_date(LocalDateTime.now().plusMinutes(5)); 
+        otp.setExp_date(LocalDateTime.now().plusMinutes(5));
         otp.setUsed(false);
         otp.setMachine(machine);
 

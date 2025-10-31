@@ -1,4 +1,4 @@
-package service;
+package org.uv.mfa.service;
 
 import jakarta.mail.*;
 import jakarta.mail.internet.*;

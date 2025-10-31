@@ -2,10 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
-package service;
+package org.uv.mfa.service;
 
-import entities.OTPCode;
-import entities.User;
+import org.uv.mfa.entities.OTPCode;
+import org.uv.mfa.entities.User;
 
 /**
  *

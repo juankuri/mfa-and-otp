@@ -1,6 +1,6 @@
-package service;
+package org.uv.mfa.service;
 
-import entities.User;
+import org.uv.mfa.entities.User;
 import java.util.List;
 import java.util.Optional;
 

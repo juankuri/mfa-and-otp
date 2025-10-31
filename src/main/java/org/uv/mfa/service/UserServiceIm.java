@@ -1,11 +1,11 @@
-package service;
+package org.uv.mfa.service;
 
-import entities.User;
+import org.uv.mfa.entities.User;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.UserRepository;
+import org.uv.mfa.repository.UserRepository;
 
 @Service
 public class UserServiceIm implements UserService {

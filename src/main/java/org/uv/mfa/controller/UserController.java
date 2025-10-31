@@ -1,6 +1,6 @@
-package controller;
+package org.uv.mfa.controller;
 
-import entities.User;
+import org.uv.mfa.entities.User;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +13,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
-import repository.UserRepository;
-import service.UserService;
+import org.uv.mfa.service.UserService;
 
 @RestController
 @RequestMapping("/user")
