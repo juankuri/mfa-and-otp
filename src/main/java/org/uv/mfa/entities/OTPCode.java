@@ -10,7 +10,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -29,7 +29,7 @@ public class OTPCode implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     private User user;
 
@@ -41,8 +41,8 @@ public class OTPCode implements Serializable {
     private LocalDateTime creation_date;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
-    @Column
-    private LocalDateTime exp_date;
+    @Column(name = "expDate")
+    private LocalDateTime expDate;
 
     @Column
     private boolean used;
@@ -83,11 +83,11 @@ public class OTPCode implements Serializable {
     }
 
     public LocalDateTime getExp_date() {
-        return exp_date;
+        return expDate;
     }
 
-    public void setExp_date(LocalDateTime exp_date) {
-        this.exp_date = exp_date;
+    public void setExp_date(LocalDateTime expDate) {
+        this.expDate = expDate;
     }
 
     public boolean isUsed() {
