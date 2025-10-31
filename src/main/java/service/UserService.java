@@ -9,5 +9,6 @@ public interface UserService {
     Optional<User> findById(Long id);
     Optional<User> findByEmail(String email);
     User save(User user);
+    boolean checkPassword(User user, String password);
     void delete(Long id);
 }

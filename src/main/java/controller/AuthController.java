@@ -34,7 +34,7 @@ public class AuthController {
         return ResponseEntity.ok("OTP sent to your email");
     }
 
-    @PostMapping("/validate-otp")
+    @PostMapping("/validate")
     public ResponseEntity<?> validateOTP(@RequestParam String email, @RequestParam String code) {
         Optional<User> user = userService.findByEmail(email);
         if (!user.isPresent()) {

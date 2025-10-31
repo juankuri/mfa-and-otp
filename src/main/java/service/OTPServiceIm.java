@@ -21,21 +21,21 @@ public class OTPServiceIm implements OTPService {
 
     @Override
     public OTPCode generateCode(User user, String machine) {
-        String codigo = String.valueOf((int) (Math.random() * 900000) + 100000);
+        String code = String.valueOf((int) (Math.random() * 900000) + 100000);
 
         OTPCode otp = new OTPCode();
         otp.setUser(user);
-        otp.setCode(codigo);
+        otp.setCode(code);
         otp.setCreation_date(LocalDateTime.now());
-        otp.setExp_date(LocalDateTime.now().plusMinutes(5)); // Expira en 5 minutos
+        otp.setExp_date(LocalDateTime.now().plusMinutes(5)); 
         otp.setUsed(false);
         otp.setMachine(machine);
 
-        OTPCode guardado = otpCodeRepository.save(otp);
+        OTPCode saved = otpCodeRepository.save(otp);
 
-        mailService.sendEmail(codigo, user.getEmail());
+        mailService.sendEmail(code, user.getEmail());
 
-        return guardado;
+        return saved;
     }
 
     @Override
