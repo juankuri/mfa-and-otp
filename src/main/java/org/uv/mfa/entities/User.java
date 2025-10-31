@@ -39,9 +39,8 @@ public class User implements Serializable {
     @Column
     private String password;
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
-    @Column
-    private LocalDateTime creation_date;
+    @Column(name = "creationDate", nullable = false, updatable = false)
+    private LocalDateTime creationDate = LocalDateTime.now();
 
     @Column
     private boolean active;
@@ -49,13 +48,13 @@ public class User implements Serializable {
     public User() {
     }
 
-    public User(Long id, String name, String lastname, String email, String password, LocalDateTime creation_date, boolean active) {
+    public User(Long id, String name, String lastname, String email, String password, LocalDateTime creationDate, boolean active) {
         this.id = id;
         this.name = name;
         this.lastname = lastname;
         this.email = email;
         this.password = password;
-        this.creation_date = creation_date;
+        this.creationDate = creationDate;
         this.active = active;
     }
 
@@ -99,12 +98,12 @@ public class User implements Serializable {
         this.password = password;
     }
 
-    public LocalDateTime getcreation_date() {
-        return creation_date;
+    public LocalDateTime getcreationDate() {
+        return creationDate;
     }
 
-    public void setcreation_date(LocalDateTime creation_date) {
-        this.creation_date = creation_date;
+    public void setcreationDate(LocalDateTime creationDate) {
+        this.creationDate = creationDate;
     }
 
     public boolean isActive() {
