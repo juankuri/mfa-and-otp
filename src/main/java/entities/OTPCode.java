@@ -50,4 +50,60 @@ public class OTPCode implements Serializable {
     @Column
     private String machine;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public LocalDateTime getCreation_date() {
+        return creation_date;
+    }
+
+    public void setCreation_date(LocalDateTime creation_date) {
+        this.creation_date = creation_date;
+    }
+
+    public LocalDateTime getExp_date() {
+        return exp_date;
+    }
+
+    public void setExp_date(LocalDateTime exp_date) {
+        this.exp_date = exp_date;
+    }
+
+    public boolean isUsed() {
+        return used;
+    }
+
+    public void setUsed(boolean used) {
+        this.used = used;
+    }
+
+    public String getMachine() {
+        return machine;
+    }
+
+    public void setMachine(String machine) {
+        this.machine = machine;
+    }
+
 }
