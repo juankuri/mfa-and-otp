@@ -50,6 +50,19 @@ public class OTPCode implements Serializable {
     @Column
     private String machine;
 
+    public OTPCode() {
+    }
+
+    public OTPCode(Long id, User user, String code, LocalDateTime creation_date, LocalDateTime expDate, boolean used, String machine) {
+        this.id = id;
+        this.user = user;
+        this.code = code;
+        this.creation_date = creation_date;
+        this.expDate = expDate;
+        this.used = used;
+        this.machine = machine;
+    }
+
     public Long getId() {
         return id;
     }

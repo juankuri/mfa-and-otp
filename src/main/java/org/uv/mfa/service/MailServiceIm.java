@@ -3,7 +3,9 @@ package org.uv.mfa.service;
 import jakarta.mail.*;
 import jakarta.mail.internet.*;
 import java.util.Properties;
+import org.springframework.stereotype.Service;
 
+@Service
 public class MailServiceIm implements MailService {
 
     private final String from = "juan111pa@gmail.com";

@@ -46,6 +46,9 @@ public class User implements Serializable {
     @Column
     private boolean active;
 
+    public User() {
+    }
+
     public User(Long id, String name, String lastname, String email, String password, LocalDateTime creation_date, boolean active) {
         this.id = id;
         this.name = name;
