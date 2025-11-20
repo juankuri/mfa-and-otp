@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import org.uv.mfa.service.OTPService;
 import org.uv.mfa.service.UserService;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = { "http://localhost:3000", "http://localhost:5173" })
 @RestController
 @RequestMapping("/auth")
 public class AuthController {

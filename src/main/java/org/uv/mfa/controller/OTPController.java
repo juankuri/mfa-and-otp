@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.uv.mfa.service.OTPService;
 import org.uv.mfa.service.UserService;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = { "http://localhost:3000", "http://localhost:5173" })
 @RestController
 @RequestMapping("/otp")
 public class OTPController {
