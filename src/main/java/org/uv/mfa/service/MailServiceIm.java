@@ -8,10 +8,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class MailServiceIm implements MailService {
 
-    private final String from = "juan111pa@gmail.com";
-    private final String key = "nabdqczioyrwgmii";
+    private final String from = "youremail@example.com";
+    private final String key = "yourkey";
 
-    private final String testTo = "juankupa11@gmail.com";
+    private final String testTo = "anotheremail@example.com";
     private final boolean testing = false;
 
     @Override
